@@ -32,11 +32,17 @@ public class Triangle
         Random random = new Random();
         for (int i = 0; i < 50; i++)
         {
-            if (random.Next(2) == 1)
+            int random = rand.Next(0, 2);
+
+            if (random == 0)
             {
-                float x = (float)(random.Next(-10, 11));
-                float y = (float)(random.Next(-10, 11));
-                float z = (float)(random.Next(-10, 11));
+                continue;
+            }
+            else
+            {
+                float x = rand.Next(-10, 10);
+                float y = rand.Next(-10, 10);
+                float z = rand.Next(-10, 10);
                 points.Add(new Point(x, y, z));
             }
         }
